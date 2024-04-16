@@ -55,7 +55,7 @@ ORDER BY gad7_count DESC;
 -- Recommendations for caregiver visualizations:
 -- If we assume that there is a higher likelihood that patients with a higher average scores are more likely to score in the Moderate (11-15) to Severe (16-21) range, then we might best serve the provider's needs by implementing visualization that best represent change over many GAD-7 results, rather than over a fewer number of results.
 -- Given more time, I would have been interested to dig deeper into potential correlations having to do with time elapsed between GAD-7 assessments.
--- {LOOK HERE} Since caregivers may benefit from the ability monitor multiple patients at once, so to allocate their attention wherever it is most needed, and to provide a visualization that fits well on a small screen, I would recommend a clustered heatmap as one data visualization option.
+-- {LOOK HERE} Since caregivers may benefit from the ability monitor multiple patients at once, so to allocate their attention wherever it is most needed, and to provide a visualization that fits well on a small screen, I would recommend a dynamic clustered heatmap as one data visualization option.
 -- The heatmap solution would allow caregivers to easily assess individual patiernts over time while also showing the bigger picture of how all of their patients are doing.
 -- An added benefit of this solution would be that a color representing high risk would persist in a patient's bar until they tested again and scored lower.
 -- A potential weakness of this solution would be that a color representing low risk might persist for too long in a high-risk patient's bar if significant time were to pass between GAD-7 assessments.
