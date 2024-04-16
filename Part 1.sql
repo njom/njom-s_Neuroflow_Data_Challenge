@@ -24,7 +24,7 @@ FROM phq_all_final
 WHERE type = 'gad7'
 GROUP BY patient_id;
 
--- I wanted to determine the mode, and the nth modes for the number of times each patient completed the GAD-7. This will help me determine what sort of visualizations might be helpful.
+-- I wanted to determine the mode, and the nth modes for the number of times each patient completed the GAD-7. This will help me determine what sort of visualizations might be helpful. (The needed subquery was a little bit advanced for for me, so I did enlist some help on this part)
 SELECT gad7_count, COUNT(*) AS patient_count
 FROM (
 	SELECT patient_id, COUNT(*) AS gad7_count
@@ -37,7 +37,7 @@ ORDER BY gad7_count ASC
 ;
 -- I found that the majority of patients completed the GAD-7 no more than 3 times.
 
--- I'm curious whether or not there is any correlation between the number of times a patient completes the GAD-7, and their average GAD-7 score. If there is, then we may want to focus our efforts more on patients who complete the assessment more times.
+-- I'm curious whether or not there is any correlation between the number of times a patient completes the GAD-7, and their average GAD-7 score. If there is, then we may want to focus our efforts more on patients who complete the assessment more times.(The needed subquery was a little bit advanced for for me, so I did enlist some help on this part)
 SELECT gad7_count, COUNT(*) AS patient_count, AVG(avg_score) AS average_score
 FROM (
 	SELECT patient_id, COUNT(*) AS gad7_count, AVG(score) AS avg_score
